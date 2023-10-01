@@ -1,6 +1,7 @@
 import csv
 import difflib
 
+
 class Dictionary:
     def __init__(self, csv_file):
         self.dictionary = []
@@ -57,16 +58,65 @@ class Dictionary:
 
 
 
+import openai
 
-# 创建 Dictionary 实例
+# 设置你的OpenAI API密钥
+api_key = "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"
+openai.api_key = api_key
+
+
+
+# 创建ParagraphTranslator类的实例
+class ParagraphTranslator:
+    def translate_paragraph(self, text, target_language):
+        try:
+            # 调用GPT-3来进行翻译
+            response = openai.Completion.create(
+                engine="text-davinci-003",
+                prompt=f"Translate the following text to {target_language}: {text}",
+                max_tokens=1  # 根据需要调整生成的最大令牌数
+            )
+
+            # 提取翻译后的文本
+            translated_text = response.choices[0].text.strip()
+
+            return translated_text
+
+        except Exception as e:
+            print(f"发生了错误: {e}")
+            return None
+
 my_dictionary = Dictionary('EnWords.csv')
+my_paragraph = ParagraphTranslator()
 
-# 循环查询
 while True:
     print(" ")
     print("*" * 40)
-    unknown_word = input("Enter a word to translate (or type 'exit' to quit): ")
-    if unknown_word.lower() == 'exit':
+    print("选择功能:")
+    print("1. 查询单词")
+    print("2. 翻译段落")
+    print("3. 退出")
+
+    choice = input("请输入数字选择功能: ")
+
+    if choice == '1':
+        unknown_word = input("请输入要查询的单词 (或者输入 'exit' 退出): ")
+        if unknown_word.lower() == 'exit':
+            break
+        result = my_dictionary.translate(unknown_word)
+        print(result)
+
+    elif choice == '2':
+        paragraph = input("请输入要翻译的段落 (或者输入 'exit' 退出): ")
+        if paragraph.lower() == 'exit':
+            break
+        target_language = input("请输入目标语言代码 (例如，'en' 表示英语): ")
+        translated_paragraph = my_paragraph.translate_paragraph(paragraph, target_language)
+        if translated_paragraph:
+            print(f"翻译结果: {translated_paragraph}")
+
+    elif choice == '3':
         break
-    result = my_dictionary.translate(unknown_word)
-    print(result)
+
+    else:
+        print("无效的选择，请重新输入。")
