@@ -14,8 +14,6 @@ from transformers.models.auto.modeling_auto import (
 
 from typing import Optional, Tuple
 
-import os
-
 import torch
 
 import json
@@ -85,7 +83,7 @@ def load_model_for_inference(
 
     if "small100" in weights_path:
         print(f"Loading custom small100 tokenizer for utils.tokenization_small100")
-        from utils.tokenization_small100 import SMALL100Tokenizer as AutoTokenizer
+        from tokenization_small100 import SMALL100Tokenizer as AutoTokenizer
     else:
         from transformers import AutoTokenizer
 
