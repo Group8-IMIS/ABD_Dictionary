@@ -1,0 +1,19 @@
+cd /d D:\GitHub\Easy-Translate
+cd C:\Users\Aroll\Documents\GitHub\ABD_Dictionary\code\translate
+
+
+python translate.py ^
+--sentences_path sample_text\en1.txt ^
+--output_path sample_text\en2es.translation.m2m100_1.2B123.txt ^
+--source_lang en ^
+--target_lang zh ^
+--model_name facebook/m2m100_1.2B
+
+
+
+accelerate launch --multi_gpu --num_processes 2 --num_machines 1 python translate.py ^
+--sentences_path sample_text\en1.txt ^
+--output_path sample_text\en2es.translation.m2m100_1.2B456.txt ^
+--source_lang en ^
+--target_lang es ^
+--model_name facebook/m2m100_1.2B
