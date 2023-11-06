@@ -1,0 +1,24 @@
+<svg width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="a">
+<stop stop-color="#fff" offset="0"/>
+<stop stop-color="#fff" stop-opacity="0" offset="1"/>
+</linearGradient>
+<radialGradient id="e" cx="33.261" cy="8.7985" r="17.171" gradientTransform="matrix(-3.7494e-16 -2.0467 1.5576 -2.8534e-16 2.767 66.933)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+<radialGradient id="d" cx="11.319" cy="22.455" r="16.956" gradientTransform="matrix(1.8719e-16 -.84302 1.0202 2.2652e-16 .60644 42.586)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#73d216" offset="0"/>
+<stop stop-color="#4e9a06" offset="1"/>
+</radialGradient>
+<radialGradient id="c" cx="24.837" cy="36.421" r="15.645" gradientTransform="matrix(1 0 0 .53672 1.5137e-15 16.873)" gradientUnits="userSpaceOnUse">
+<stop offset="0"/>
+<stop stop-opacity="0" offset="1"/>
+</radialGradient>
+<radialGradient id="b" cx="26.438" cy="7.6636" r="17.171" gradientTransform="matrix(-3.7494e-16 -2.0467 1.5576 -2.8534e-16 2.767 66.933)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+</defs>
+<path transform="matrix(1.2145 0 0 .59546 -6.6942 16.666)" d="m40.482 36.421a15.645 8.3969 0 1 1-31.289 0 15.645 8.3969 0 1 1 31.289 0z" color="#000000" fill="url(#c)" fill-rule="evenodd" opacity=".29947"/>
+<path d="m6.5 1.5v5.9962h15.125l-15.094 18.004 7.9688 0.0625v12.938h17.969v-12.938h8.0312l-15.375-18.066h15.373v-5.9962h-33.998z" color="#000000" fill="url(#d)" fill-rule="evenodd" stroke="#3a7304" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+<path d="m7.5855 25.033h7.4103l0.066601 6.5618c5.6556-11 8.922-5.4857 17.832-13.506 0 0-7.7838-10.119-8.8074-11.026l-1.4049-0.043576-15.096 18.014z" color="#000000" fill="url(#e)" fill-rule="evenodd" opacity=".50802"/>
+<path d="m15.603 37.5h15.9v-12.993h6.809l-14.502-17.027-0.89025 0.031966-14.265 17.038 6.8204-0.022097 0.12769 12.972z" color="#000000" fill="none" opacity=".48128" stroke="#fff" stroke-miterlimit="10"/>
+<rect x="7.4989" y="2.4954" width="32.012" height="4.0095" fill="none" opacity=".481" stroke="#fff"/>
+<rect x="6.8943" y="1.8613" width="33.234" height="5.3033" color="#000000" fill="url(#b)" fill-rule="evenodd" opacity=".52273"/>
+</svg>

@@ -1,0 +1,33 @@
+name: autofix.ci
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "winlibs/**"
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "winlibs/**"
+permissions:
+  contents: read
+jobs:
+  clang-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.2
+        with:
+
+          fetch-depth: 2
+      # format the latest commit
+      - name: ubuntu install clang-format
+        run: |
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+          brew install clang-format
+          (/home/linuxbrew/.linuxbrew/opt/clang-format/bin/git-clang-format --binary=/home/linuxbrew/.linuxbrew/opt/clang-format/bin/clang-format --style=file HEAD^) || true
+
+      - uses: autofix-ci/action@89762f9c25dd85f6b78cd40e521232e403357ec0    
+
+

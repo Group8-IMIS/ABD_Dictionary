@@ -1,0 +1,60 @@
+site_name: GoldenDict-NG
+site_description: GoldenDict-ng is a open source, cross platform, multi formats, feature rich dictionary 是一个开源跨平台支持各种格式的字典程序
+site_url: https://xiaoyifang.github.io/goldendict-ng/
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.expand
+    - content.action.edit
+    # - navigation.tabs -> for tabs
+
+# top right repo widget
+repo_name: GoldenDict-ng
+repo_url: https://github.com/xiaoyifang/goldendict-ng
+edit_uri: edit/staged/website/docs/
+
+markdown_extensions:
+  - attr_list # for image ![](/img/a.webp){ widget=300}
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Getting started: index.md
+  - Installation : install.md
+  - Dictionary Formats: dictformats.md
+  - Manage Dictionaries: 
+      - Sources: manage_sources.md
+      - Groups: manage_groups.md
+  - Interface:
+      - Popup Window: ui_popup.md
+      - Headwords Dialog: ui_headwords.md
+      - Full Text Search: ui_fulltextsearch.md
+      - ToolBar & DictBar: ui_toolbar.md
+      - Favorites: ui_favorites.md
+      - Shortcuts: ui_shortcuts.md
+  - Special Usages:
+      - Anki Integration: topic_anki.md
+      - Command Lines: topic_commandline.md
+      - Custom Stylesheet & JavaScript: topic_userstyle.md
+      - Portable Mode: topic_portablemode.md
+      - Custom transliteration: topic_transliteration.md
+      - Customize Dictionary: custom_dictionary.md
+      - OCR Integration: howto/ocr.md
+      - Wayland/Linux: topic_wayland.md
+  - Report Bugs & Feedbacks: feedbacks.md
+  - Contributor Guides:
+    - Developer: developer.md
+    - How to:
+       - Build from source: howto/build_from_source.md
+       - Customize the opencc: howto/how to customize the opencc.md
+       - Qt version and github action: howto/how to find out the latest qt version and module in github qt action.md
+       - Use .clang-format: howto/how to use .clang-format to format the code.md
+       - Breadpad crash analysis: howto/how to use breadpad crash analysis.md
+       - Build ffmpeg on Windows: howto/how to build ffmpeg for visual studio.md 
+       - How to update the crowdin.ts file: howto/how to update crowdin.ts file.md
+       - How to debug dictionary js: howto/how to debug dictionary js.md
+

@@ -1,4 +1,5 @@
 cd /d D:\GitHub\Easy-Translate
+cd /d D:\Code\GitHub\ABD_Dictionary
 cd C:\Users\Aroll\Documents\GitHub\ABD_Dictionary\code\translate
 
 
@@ -16,4 +17,15 @@ accelerate launch --multi_gpu --num_processes 2 --num_machines 1 python translat
 --output_path sample_text\en2es.translation.m2m100_1.2B456.txt ^
 --source_lang en ^
 --target_lang es ^
+--model_name facebook/m2m100_1.2B
+
+
+
+
+
+python translate.py ^
+--sentences_path sample_text\fr.txt ^
+--output_path sample_text\froutput.txt ^
+--source_lang fr ^
+--target_lang zh ^
 --model_name facebook/m2m100_1.2B

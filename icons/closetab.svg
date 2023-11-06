@@ -1,0 +1,18 @@
+<svg width="48" height="48" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<radialGradient id="a" cx="10" cy="3.458" r="9.7786" gradientTransform="matrix(2.4179 0 0 2.4179 -14.179 -4.9032)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#fff" offset="0"/>
+<stop stop-color="#fff" stop-opacity="0" offset="1"/>
+</radialGradient>
+<radialGradient id="b" cx="16.179" cy="15.733" r="6.1977" gradientTransform="matrix(1 0 0 1.0068 0 -.10635)" gradientUnits="userSpaceOnUse">
+<stop offset="0"/>
+<stop stop-opacity="0" offset="1"/>
+</radialGradient>
+</defs>
+<g transform="matrix(1.4566 0 0 1.4455 .41129 1.2325)">
+<path transform="matrix(1.3731 0 0 1.3836 2.4638 2.4334)" d="m19.25 9.625a9.25 9.25 0 1 1-18.5 0 9.25 9.25 0 1 1 18.5 0z" color="#000000" fill="none" opacity=".35393" stroke="url(#a)" stroke-width=".5"/>
+<path d="m11.045 10.5 10.298 10.439" color="#000000" fill="none" stroke="#f0464d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0736"/>
+<path d="m21.343 10.527-10.328 10.412" color="#000000" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0675"/>
+<path d="m21.343 10.527-10.328 10.412" color="#000000" fill="url(#b)" stroke="#f0464d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.0675"/>
+</g>
+</svg>
