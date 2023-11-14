@@ -59,11 +59,11 @@ def get_dataloader(
 
 
 def main(
-    sentences_path: str,
-    output_path: str,
-    source_lang: str,
-    target_lang: str,
-    starting_batch_size: int,
+    sentences_path: str = "sample_text/en1.txt",
+    output_path: str = "sample_text/en1_zh.txt",
+    source_lang: str = "en",
+    target_lang: str = "zh",
+    starting_batch_size: int = 128,
     model_name: str = "facebook/m2m100_1.2B",
     lora_weights_name_or_path: str = None,
     force_auto_device_map: bool = False,
@@ -291,172 +291,23 @@ def main(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run the translation experiments")
-    parser.add_argument(
-        "--sentences_path",
-        type=str,
-        required=True,
-        help="Path to a txt file containing the sentences to translate. One sentence per line.",
-    )
-
-    parser.add_argument(
-        "--output_path",
-        type=str,
-        required=True,
-        help="Path to a txt file where the translated sentences will be written.",
-    )
-
-    parser.add_argument(
-        "--source_lang",
-        type=str,
-        default=None,
-        required=False,
-        help="Source language id. See: supported_languages.md. Required for m2m100 and nllb200",
-    )
-
-    parser.add_argument(
-        "--target_lang",
-        type=str,
-        default=None,
-        required=False,
-        help="Source language id. See: supported_languages.md. Required for m2m100 and nllb200",
-    )
-
-    parser.add_argument(
-        "--starting_batch_size",
-        type=int,
-        default=128,
-        help="Starting batch size, we will automatically reduce it if we find an OOM error."
-        "If you use multiple devices, we will divide this number by the number of devices.",
-    )
-
-    parser.add_argument(
-        "--model_name",
-        type=str,
-        default="facebook/m2m100_1.2B",
-        help="Path to the model to use. See: https://huggingface.co/models",
-    )
-
-    parser.add_argument(
-        "--lora_weights_name_or_path",
-        type=str,
-        default=None,
-        help="If the model uses LoRA weights, path to those weights. See: https://github.com/huggingface/peft",
-    )
-
-    parser.add_argument(
-        "--force_auto_device_map",
-        action="store_true",
-        help=" Whether to force the use of the auto device map. If set to True, "
-        "the model will be split across GPUs and CPU to fit the model in memory. "
-        "If set to False, a full copy of the model will be loaded  into each GPU. Defaults to False.",
-    )
-
-    parser.add_argument(
-        "--max_length",
-        type=int,
-        default=128,
-        help="Maximum number of tokens in the source sentence and generated sentence. "
-        "Increase this value to translate longer sentences, at the cost of increasing memory usage.",
-    )
-
-    parser.add_argument(
-        "--num_beams",
-        type=int,
-        default=5,
-        help="Number of beams for beam search, m2m10 author recommends 5, but it might use too much memory",
-    )
-
-    parser.add_argument(
-        "--num_return_sequences",
-        type=int,
-        default=1,
-        help="Number of possible translation to return for each sentence (num_return_sequences<=num_beams).",
-    )
-
-    parser.add_argument(
-        "--precision",
-        type=str,
-        default=None,
-        choices=["bf16", "fp16", "32", "4", "8"],
-        help="Precision of the model. bf16, fp16 or 32, 8 , 4 "
-        "(4bits/8bits quantification, requires bitsandbytes library: https://github.com/TimDettmers/bitsandbytes). "
-        "If None, we will use the torch.dtype of the model weights.",
-    )
-
-    parser.add_argument(
-        "--do_sample",
-        action="store_true",
-        help="Use sampling instead of beam search.",
-    )
-
-    parser.add_argument(
-        "--temperature",
-        type=float,
-        default=0.8,
-        help="Temperature for sampling, value used only if do_sample is True.",
-    )
-
-    parser.add_argument(
-        "--top_k",
-        type=int,
-        default=100,
-        help="If do_sample is True, will sample from the top k most likely tokens.",
-    )
-
-    parser.add_argument(
-        "--top_p",
-        type=float,
-        default=0.75,
-        help="If do_sample is True, will sample from the top k most likely tokens.",
-    )
-
-    parser.add_argument(
-        "--keep_special_tokens",
-        action="store_true",
-        help="Keep special tokens in the decoded text.",
-    )
-
-    parser.add_argument(
-        "--keep_tokenization_spaces",
-        action="store_true",
-        help="Do not clean spaces in the decoded text.",
-    )
-
-    parser.add_argument(
-        "--repetition_penalty",
-        type=float,
-        default=None,
-        help="Repetition penalty.",
-    )
-
-    parser.add_argument(
-        "--prompt",
-        type=str,
-        default=None,
-        help="Prompt to use for generation. "
-        "It must include the special token %%SENTENCE%% which will be replaced by the sentence to translate.",
-    )
-
-    args = parser.parse_args()
-
     main(
-        sentences_path=args.sentences_path,
-        output_path=args.output_path,
-        source_lang=args.source_lang,
-        target_lang=args.target_lang,
-        starting_batch_size=args.starting_batch_size,
-        model_name=args.model_name,
-        max_length=args.max_length,
-        num_beams=args.num_beams,
-        num_return_sequences=args.num_return_sequences,
-        precision=args.precision,
-        do_sample=args.do_sample,
-        temperature=args.temperature,
-        top_k=args.top_k,
-        top_p=args.top_p,
-        keep_special_tokens=args.keep_special_tokens,
-        keep_tokenization_spaces=args.keep_tokenization_spaces,
-        repetition_penalty=args.repetition_penalty,
-        prompt=args.prompt,
+        sentences_path="sample_text/en1.txt",
+        output_path="sample_text/en2es.translation.m2m100_1.2B123.txt",
+        source_lang="en",
+        target_lang="zh",
+        starting_batch_size=128,
+        model_name="facebook/m2m100_1.2B",
+        max_length=128,
+        num_beams=5,
+        num_return_sequences=1,
+        precision=None,
+        do_sample=False,
+        temperature=0.8,
+        top_k=100,
+        top_p=0.75,
+        keep_special_tokens=False,
+        keep_tokenization_spaces=False,
+        repetition_penalty=None,
+        prompt=None,
     )
