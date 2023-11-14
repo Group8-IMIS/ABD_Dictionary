@@ -305,6 +305,8 @@ void processCommandLine( QCoreApplication * app, GDOptions * result )
   }
 }
 
+
+//主函数： main函数是应用程序的入口点。它初始化各种组件，处理命令行参数，注册URL方案，设置翻译，并创建MainWindow类的实例。
 int main( int argc, char ** argv )
 {
 #ifdef Q_OS_UNIX
