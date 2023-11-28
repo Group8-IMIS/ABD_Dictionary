@@ -33,7 +33,7 @@ About::About( QWidget * parent, std::vector< sptr< Dictionary::Class > > * dicto
     QGuiApplication::clipboard()->setText( tempDictList );
   } );
 
-  QFile creditsFile( ":/CREDITS.txt" );
+  QFile creditsFile( ":/CREDITS.txt" );//CREDITS.txt is a file in the resources，这个文件是用来解释版权的，和制作人员的
 
   if ( creditsFile.open( QFile::ReadOnly ) ) {
     QStringList creditsList = QString::fromUtf8( creditsFile.readAll() ).split( '\n', Qt::SkipEmptyParts );
