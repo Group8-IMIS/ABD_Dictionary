@@ -26,7 +26,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>GoldenDict-ng - Initializing</string>
+   <string>ABD_Dictionary - Initializing</string>
   </property>
   <widget class="QLabel" name="splashImage">
    <property name="geometry">

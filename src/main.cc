@@ -356,10 +356,10 @@ int main( int argc, char ** argv )
   newArgv[ argc ]     = ARG_DISABLE_WEB_SECURITY;
   newArgv[ argc + 1 ] = nullptr;
 
-  QHotkeyApplication app( "GoldenDict-ng", newArgc, newArgv );
+  QHotkeyApplication app( "ABD dictionary", newArgc, newArgv );
 
-  QHotkeyApplication::setApplicationName( "GoldenDict-ng" );
-  QHotkeyApplication::setOrganizationDomain( "https://github.com/xiaoyifang/goldendict-ng" );
+  QHotkeyApplication::setApplicationName( "ABD dictionary" );
+  QHotkeyApplication::setOrganizationDomain( "https://github.com/Group8-IMIS/ABD_Dictionary" );
   QHotkeyApplication::setWindowIcon( QIcon( ":/icons/programicon.png" ) );
 
 #if defined( USE_BREAKPAD )

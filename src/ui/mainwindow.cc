@@ -740,7 +740,7 @@ MainWindow::MainWindow( Config::Class & cfg_ ):
   // After we have dictionaries and groups, we can populate history
   //  historyChanged();
 
-  setWindowTitle( "GoldenDict-ng" );
+  setWindowTitle( "ABD_Dictionary" );
 
   // Create tab list menu
   createTabList();

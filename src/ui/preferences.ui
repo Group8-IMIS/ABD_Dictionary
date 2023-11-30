@@ -24,7 +24,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <property name="iconSize">
       <size>
@@ -771,7 +771,7 @@ in the pressed state when the word selection changes.</string>
              <string>Do not show popup when selection or clipboard in one of GoldenDict's own windows changes</string>
             </property>
             <property name="text">
-             <string>Ignore GoldenDict's own selection and clipboard changes</string>
+             <string>Ignore ABD_Dictionary's own selection and clipboard changes</string>
             </property>
            </widget>
           </item>
@@ -904,7 +904,7 @@ in the pressed state when the word selection changes.</string>
        <item>
         <widget class="QLabel" name="label_8">
          <property name="text">
-          <string>The hotkeys are global and work from any program and within any context as long as GoldenDict is running in background.</string>
+          <string>The hotkeys are global and work from any program and within any context as long as ABD_Dictionary is running in background.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -1316,7 +1316,7 @@ you are browsing. If some site breaks because of this, try disabling this.</stri
 Enable this option to workaround the problem.</string>
          </property>
          <property name="text">
-          <string>Do not identify GoldenDict in HTTP headers</string>
+          <string>Do not identify ABD_Dictionary in HTTP headers</string>
          </property>
         </widget>
        </item>
