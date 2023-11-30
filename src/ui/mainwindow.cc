@@ -1402,7 +1402,7 @@ void MainWindow::updateTrayIcon()
                          QIcon::fromTheme( "goldendict-scan-tray", QIcon( ":/icons/programicon_scan.png" ) ) :
                          QIcon::fromTheme( "goldendict-tray", QIcon( ":/icons/programicon_old.png" ) ) );
 
-    trayIcon->setToolTip( "GoldenDict-ng" );
+    trayIcon->setToolTip( "ABD_Dictionary" );
   }
 
   // The 'Close to tray' action is associated with the tray icon, so we hide
@@ -1975,7 +1975,7 @@ void MainWindow::updateWindowTitle()
   if ( view ) {
     QString str = view->getTitle();
     if ( !str.isEmpty() ) {
-      setWindowTitle( tr( "%1 - %2" ).arg( str, "GoldenDict-ng" ) );
+      setWindowTitle( tr( "%1 - %2" ).arg( str, "ABD_Dictionary" ) );//更改初始主标题名称，欢迎使用！-ABD_Dictionary
     }
   }
 }

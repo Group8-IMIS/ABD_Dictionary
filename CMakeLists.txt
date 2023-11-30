@@ -17,18 +17,18 @@ option(USE_SYSTEM_TOML "use system toml++ instead of bundled one" OFF)
 ## 1. There are personal scripts assuming the binary name to be "goldendict" -> require everyone to change the name in their script
 ## 2. There are icon themes that assuming the icon name to be "goldendict" -> invalidate the GD icon when using a icon theme
 ## 3. There are dictionary packages that install files to "/usr/share/goldendict/content" -> nullify the auto dict discovery
-option(USE_ALTERNATIVE_NAME "Force the name goldendict-ng " OFF)
+option(USE_ALTERNATIVE_NAME "Force the name ABD_Dictionary " OFF)
 
 include(FeatureSummary)
 
-project(goldendict-ng
+project(ABD_Dictionary
         VERSION 23.10.01
         LANGUAGES CXX C)
 
 if (NOT USE_ALTERNATIVE_NAME)
     set(GOLDENDICT "goldendict") # binary/executable name
 else ()
-    set(GOLDENDICT "goldendict-ng")
+    set(GOLDENDICT "ABD_Dictionary")# binary/executable name
 endif ()
 
 set(CMAKE_CXX_STANDARD 17)

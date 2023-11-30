@@ -16,7 +16,7 @@ QString version()
 
 QString everything()
 {
-  return QStringLiteral( "Goldendict-ng " ) + Version::version() + "\n" + "Qt " + QLatin1String( qVersion() ) + " "
+  return QStringLiteral( "ABD_Dictionary " ) + Version::version() + "\n" + "Qt " + QLatin1String( qVersion() ) + " "
     + Version::compiler + " " + QSysInfo::productType() + " " + QSysInfo::kernelType() + " " + QSysInfo::kernelVersion()
     + " " + QSysInfo::buildAbi() + "\n" + "Flags:" + flags;
 }

@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = goldendict
+TARGET = ABD_Dictionary
 VERSION = 23.10.01
 
 # Generate version file. We do this here and in a build rule described later.

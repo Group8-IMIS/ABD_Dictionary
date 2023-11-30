@@ -8,8 +8,8 @@
       <translation>关于</translation>
     </message>
     <message>
-      <source>GoldenDict-ng dictionary lookup program, version </source>
-      <translation>GoldenDict-ng 电子词典程序，版本 </translation>
+      <source>ABD_Dictionary dictionary lookup program, version </source>
+      <translation>ABD_Dictionary 电子词典程序，版本 </translation>
     </message>
     <message>
       <source>Licensed under GNU GPLv3 or later</source>
@@ -1178,8 +1178,8 @@ between classic and school orthography in cyrillic)</source>
       <translation>词典名称</translation>
     </message>
     <message>
-      <source>GoldenDict-ng - Initializing</source>
-      <translation>初始化 GoldenDict-ng</translation>
+      <source>ABD_Dictionary - Initializing</source>
+      <translation>初始化 ABD_Dictionary</translation>
     </message>
     <message>
       <source>Please wait...</source>
@@ -2313,8 +2313,8 @@ between classic and school orthography in cyrillic)</source>
       <translation>显示主窗口(&amp;M)</translation>
     </message>
     <message>
-      <source>About GoldenDict-ng</source>
-      <translation>关于 GoldenDict-ng</translation>
+      <source>About ABD_Dictionary</source>
+      <translation>关于 ABD_Dictionary</translation>
     </message>
     <message>
       <source>Download</source>
@@ -2649,7 +2649,7 @@ To find &apos;*&apos;, &apos;?&apos;, &apos;[&apos;, &apos;]&apos; symbols use &
     </message>
     <message>
       <source>GoldenDict reference</source>
-      <translation>GoldenDict-ng 帮助</translation>
+      <translation>ABD_Dictionary 帮助</translation>
     </message>
     <message>
       <source>Show</source>
