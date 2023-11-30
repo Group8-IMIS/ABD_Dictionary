@@ -1,4 +1,4 @@
-These icons were taken from http://www.famfamfam.com/lab/icons/flags/
+These icons were taken from http://www.famfamfam.com/lab/icons/flags/q
 
 Licensed under the following conditions:
 

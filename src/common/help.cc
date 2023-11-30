@@ -7,7 +7,7 @@ namespace Help {
 void openHelpWebpage( section sec )
 {
 
-  const auto main_url = QStringLiteral( "https://xiaoyifang.github.io/goldendict-ng/" );
+  const auto main_url = QStringLiteral( "https://github.com/Group8-IMIS/ABD_Dictionary" );
   QUrl url;
   switch ( sec ) {
     case section::ui_fulltextserch:
