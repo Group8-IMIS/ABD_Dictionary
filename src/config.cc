@@ -32,7 +32,7 @@ namespace Config {
 
 namespace {
 #ifdef XDG_BASE_DIRECTORY_COMPLIANCE
-const char xdgSubdirName[] = "goldendict";
+const char xdgSubdirName[] = "ABD_Dictionary";
 
 QDir getDataDir()
 {

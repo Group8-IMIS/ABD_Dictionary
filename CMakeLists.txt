@@ -26,7 +26,7 @@ project(ABD_Dictionary
         LANGUAGES CXX C)
 
 if (NOT USE_ALTERNATIVE_NAME)
-    set(GOLDENDICT "goldendict") # binary/executable name
+    set(GOLDENDICT "ABD_Dictionary") # binary/executable name
 else ()
     set(GOLDENDICT "ABD_Dictionary")# binary/executable name
 endif ()
