@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>8</number>
      </property>
      <property name="iconSize">
       <size>
@@ -542,7 +542,7 @@ Full list of availiable languages can be found &lt;a href=&quot;https://linguali
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Live pronunciations from &lt;a href=&quot;http://www.forvo.com/&quot;&gt;forvo.com&lt;/a&gt;. The site allows people to record and share word pronunciations. You can listen to them from GoldenDict.</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Live pronunciations from &lt;a href=&quot;http://www.forvo.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#617884;&quot;&gt;forvo.com&lt;/span&gt;&lt;/a&gt;. The site allows people to record and share word pronunciations. You can listen to them from &lt;a href=&quot;https://github.com/Group8-IMIS/ABD_Dictionary&quot;&gt;&lt;span style=&quot; font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Noto Sans','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji'; font-size:8pt; font-weight:700; text-decoration: underline; color:#000000; background-color:#ffffff;&quot;&gt;ABD_Dictionary&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
